@@ -1,6 +1,7 @@
 resource "aws_api_gateway_domain_name" "this" {
   domain_name              = var.api_gateway_domain_name
   regional_certificate_arn = var.acm_certificate_arn
+  tags                     = var.tags
 
   endpoint_configuration {
     types = ["REGIONAL"]
