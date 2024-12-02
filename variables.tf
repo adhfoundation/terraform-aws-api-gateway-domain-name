@@ -8,6 +8,11 @@ variable "api_gateway_domain_name" {
   type        = string
 }
 
+variable "enable_route53_record" {
+  description = "Enable Route53 Record for Custom Domain Name"
+  type        = bool
+  default     = false
+}
 variable "route53_zone_id" {
   description = "Route53 Hosted Zone Id"
   type        = string
