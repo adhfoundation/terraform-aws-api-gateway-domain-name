@@ -13,9 +13,11 @@ variable "enable_route53_record" {
   type        = bool
   default     = false
 }
+
 variable "route53_zone_id" {
   description = "Route53 Hosted Zone Id"
   type        = string
+  default     = ""
 }
 
 variable "tags" {
