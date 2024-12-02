@@ -9,6 +9,7 @@ resource "aws_api_gateway_domain_name" "this" {
 }
 
 resource "aws_route53_record" "this" {
+  count   = var.enable_route53_record ? 1 : 0
   name    = aws_api_gateway_domain_name.this.domain_name
   type    = "A"
   zone_id = var.route53_zone_id
