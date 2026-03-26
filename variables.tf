@@ -8,6 +8,16 @@ variable "api_gateway_domain_name" {
   type        = string
 }
 
+variable "api_gateway_id" {
+  description = "API Gateway id"
+  type        = string
+}
+
+variable "api_gateway_stage_name" {
+  description = "API Gateway Stage Name"
+  type        = string
+}
+
 variable "enable_route53_record" {
   description = "Enable Route53 Record for Custom Domain Name"
   type        = bool
