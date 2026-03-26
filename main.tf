@@ -8,6 +8,12 @@ resource "aws_api_gateway_domain_name" "this" {
   }
 }
 
+resource "aws_api_gateway_base_path_mapping" "this" {
+  api_id      = var.api_gateway_id
+  stage_name  = var.api_gateway_stage_name
+  domain_name = aws_api_gateway_domain_name.this.domain_name
+}
+
 resource "aws_route53_record" "this" {
   count   = var.enable_route53_record ? 1 : 0
   name    = aws_api_gateway_domain_name.this.domain_name
