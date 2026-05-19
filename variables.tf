@@ -34,3 +34,15 @@ variable "tags" {
   description = "Resource Tags"
   type        = map(string)
 }
+
+variable "trust_store_url" {
+  description = "Trust Store URL"
+  type        = string
+  default     = ""
+}
+
+variable "trust_store_version" {
+  description = "Trust Store Version"
+  type        = string
+  default     = ""
+}

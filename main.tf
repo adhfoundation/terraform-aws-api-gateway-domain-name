@@ -1,7 +1,11 @@
 resource "aws_api_gateway_domain_name" "this" {
-  domain_name              = var.api_gateway_domain_name
-  regional_certificate_arn = var.acm_certificate_arn
-  tags                     = var.tags
+  domain_name               = var.api_gateway_domain_name
+  regional_certificate_arn  = var.acm_certificate_arn
+  tags                      = var.tags
+  mutual_tls_authentication = var.trust_store_url ? {
+    trust_store_url = var.trust_store_url
+    trust_store_version = var.trust_store_version
+  } : {}
 
   endpoint_configuration {
     types = ["REGIONAL"]
