@@ -35,7 +35,7 @@ variable "tags" {
   type        = map(string)
 }
 
-variable "trust_store_url" {
+variable "trust_store_uri" {
   description = "Trust Store URL"
   type        = string
   default     = ""
