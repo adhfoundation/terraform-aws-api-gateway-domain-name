@@ -35,13 +35,13 @@ variable "tags" {
   type        = map(string)
 }
 
-variable "trust_store_uri" {
+variable "truststore_uri" {
   description = "Trust Store URL"
   type        = string
   default     = ""
 }
 
-variable "trust_store_version" {
+variable "truststore_version" {
   description = "Trust Store Version"
   type        = string
   default     = ""

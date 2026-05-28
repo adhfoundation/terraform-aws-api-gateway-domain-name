@@ -4,11 +4,11 @@ resource "aws_api_gateway_domain_name" "this" {
   tags                      = var.tags
   
   dynamic "mutual_tls_authentication" {
-    for_each = var.trust_store_uri != null ? [1] : []
+    for_each = var.truststore_uri != null ? [1] : []
 
     content {
-      trust_store_uri     = var.trust_store_uri
-      trust_store_version = var.trust_store_version
+      truststore_uri     = var.truststore_uri
+      truststore_version = var.truststore_version
     }
   }
 
